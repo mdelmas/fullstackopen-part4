@@ -1,7 +1,7 @@
 const logger = require('./logger');
 
 const requestLogger = (request, response, next) => {
-  if (request.path === '/json' || request.path === '/json/version') {
+  if (request.path === '/json' || request.path === '/json/version') {
     return next();
   }
 
