@@ -5,7 +5,7 @@ const requestLogger = (request, response, next) => {
     return next();
   }
 
-  logger.info(`${request.method} - ${request.path} : ${request.body}`);
+  logger.info(`${request.method} - ${request.path} : ${JSON.stringify(request.body)}`);
   next();
 };
 
@@ -14,7 +14,7 @@ const unknownEndpoint = ((request, response) => {
 });
 
 const errorHandler = (error, request, response, next) => {
-  logger.error('Error: ', error.message);
+  logger.error('Error: ', error.name, error.message);
 
   if (error.name === 'CastError') {
     return response.status(400).json({ message: 'Invalid id...' });
