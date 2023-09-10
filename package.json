@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "jest --verbose",
-    "dev": "nodemon index.js",
+    "start": "NODE_ENV=production node index.js",
+    "test": "NODE_ENV=test jest --verbose",
+    "dev": "NODE_ENV=development nodemon index.js",
     "lint": "eslint"
   },
   "author": "",
@@ -21,7 +21,8 @@
   },
   "devDependencies": {
     "jest": "^29.6.4",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   },
   "jest": {
     "testEnvironment": "node"

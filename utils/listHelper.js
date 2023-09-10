@@ -38,8 +38,6 @@ const mostLikes = (blogs) => {
     return null;
   }
 
-  console.log(blogs);
-
   let likesByAuthors = _.reduce(blogs, (result, value) => {
     if (!result[value.author]) {
       result[value.author] = 0;
@@ -54,13 +52,6 @@ const mostLikes = (blogs) => {
     author: authorWithMaxLikes,
     likes: maxLikes
   };
-
-  // let blogsCountByAuthors = _.countBy(blogs, blog => blog.author);
-
-  // return {
-  //   author: authorWithMaxBlogs,
-  //   blogs: blogsCountByAuthors[authorWithMaxBlogs],
-  // };
 };
 
 module.exports = {
