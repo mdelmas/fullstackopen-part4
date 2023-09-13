@@ -37,4 +37,22 @@ const initialBlogs = [
   }
 ];
 
-module.exports = { initialBlogs };
+const initialUsers = [
+  {
+    username: 'user1',
+    name: 'User 1',
+    password: 'password1'
+  },
+  {
+    username: 'user2',
+    name: 'User 2',
+    password: 'password2'
+  },
+  {
+    username: 'user3',
+    name: 'User 3',
+    password: 'password3'
+  }
+];
+
+module.exports = { initialBlogs, initialUsers };
